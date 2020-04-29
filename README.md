@@ -6,7 +6,7 @@ This library was build for Dual Quaternion Calculation Applications. <br><br>
 
 | Name | Type | Description |
 | --- | --- | --- |
-| [**Create**](#quaternioncreate) | std::array<double, 4> | Create Quaternion Rotation, Angle in Degree |
+| [**Create**](#quaternion::create) | std::array<double, 4> | Create Quaternion Rotation, Angle in Degree |
 | **Conjugate** | std::array<double, 4> | Quaternion Conjugate |
 | **Normalize** | double | Normalize Quaternion , Unit Quaternion = 1 |
 | **Add** | std::array<double, 4> | Add Two Quaternions |
@@ -29,7 +29,7 @@ This library was build for Dual Quaternion Calculation Applications. <br><br>
 | **Multiply** | std::array<double, 8> | Multiply Two Dual Quaternions |
 
 
-### QuaternionCreate
+### Quaternion::Create
 
 ### Note : 
 This library used std::array<> <br>
