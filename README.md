@@ -45,13 +45,8 @@ Quaternion1 = Quaternion::Create(Angle,DirectionOfRotation);
 ### Quaternion::Conjugate
 Return Quaternion Conjugate based on the equation below :<br>
 
-
 **Example :**
-double Angle = 90; *//in Degrees*<br>
-std::array<int, 3> DirectionOfRotation = {0,1,0};<br>
-std::array<double, 4> Quaternion1; <br>
-Quaternion1 = Quaternion::Create(Angle,DirectionOfRotation);<br>
-Quaternion::Conjugate(Quaternion1);
+Quaternion::Conjugate([Quaternion1](#quaternioncreate));
 
 
 ### Note : 
