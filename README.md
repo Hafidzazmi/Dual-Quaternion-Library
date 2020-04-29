@@ -43,9 +43,8 @@ Quaternion1 = Quaternion::Create(Angle,DirectionOfRotation);
 
 
 ### Quaternion::Conjugate
-Return Quaternion Conjugate based on the equation below :
+Return Quaternion Conjugate based on the equation below :<br>
 
-<img src="http://www.sciweavers.org/tex2img.php?eq=q%20%3D%20%5Bcos%28%20%5Ctheta%20%2F2%29%2C%20-d%2Asin%28%20%5Ctheta%20%2F2%29%20%5D&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="q = [cos( \theta /2), -d*sin( \theta /2) ]" width="247" height="19" />
 
 **Example :**
 double Angle = 90; *//in Degrees*<br>
