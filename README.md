@@ -8,7 +8,7 @@ This library was build for Quaternion & Dual Quaternion Calculation Tutorial. <b
 | --- | --- | --- |
 | [**Create**](#quaternioncreate) | std::array<double, 4> | Create Quaternion Rotation, Angle in Degree |
 | [**Conjugate**](#quaternionconjugate) | std::array<double, 4> | Quaternion Conjugate |
-| **Normalize** | double | Normalize Quaternion , Unit Quaternion = 1 |
+| [**Normalize**](#quaternionnormalize) | double | Normalize Quaternion , Unit Quaternion = 1 |
 | **Add** | std::array<double, 4> | Add Two Quaternions |
 | **Subtract** | std::array<double, 4> | Subtract Two Quaternions |
 | **Multiply** | std::array<double, 4> | Multiply Two Quaternions |
@@ -32,7 +32,10 @@ This library was build for Quaternion & Dual Quaternion Calculation Tutorial. <b
 ### Quaternion::Create
 Create a quaternion rotation based on the equation below :
 
-<img src="http://www.sciweavers.org/tex2img.php?eq=q%3D%20%5Bcos%28%20%5Ctheta%20%2F2%29%2C%20d%2Asin%28%20%5Ctheta%20%2F2%29%5D&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="q= [cos( \theta /2), d*sin( \theta /2)]" width="233" height="19" />
+<img src="http://www.sciweavers.org/tex2img.php?eq=q%3D%20%5Bcos%28%20%5Ctheta%20%2F2%29%2C%20d%2Asin%28%20%5Ctheta%20%2F2%29%5D&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="q= [cos( \theta /2), d*sin( \theta /2)]" width="233" height="19" /><br>
+where : <br>
+<img src="http://www.sciweavers.org/tex2img.php?eq=%20q_%7Bs%7D%20%3D%20cos%28%20%5Ctheta%20%2F2%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt=" q_{s} = cos( \theta /2)" width="117" height="19" /><br>
+<img src="http://www.sciweavers.org/tex2img.php?eq= q_{v} = d*sin( \theta /2)&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt=" q_{v} = d*sin( \theta /2)" width="146" height="19" /><br>
 
 
 **Example :**<br>
@@ -48,6 +51,25 @@ Return Quaternion Conjugate based on the equation below :<br>
 
 **Example :**<br>
 Quaternion::Conjugate([Quaternion1](#quaternioncreate));
+
+
+
+### Quaternion::Normalize
+Return Quaternion Normalize based on the equation below :<br>
+<img src="https://bit.ly/3aT4S2d" align="center" border="0" alt="||q|| = \sqrt{q0^{2} + q1^{2} + q2^{2} + q3^{2}} " width="256" height="26" /><br>
+***Note : Normalize Unit Quaternion will return 1***
+
+**Example :**<br>
+Quaternion::Normalize([Quaternion1](#quaternioncreate));
+
+
+### Quaternion::Add
+Add two Quaternions (P + Q) based on the equation below :<br>
+<img src="http://www.sciweavers.org/tex2img.php?eq=%20p%20%2B%20q%20%3D%20%5Bp_%7Bs%7D%20%2B%20q_%7Bs%7D%2Cp_%7Bv%7D%20%2B%20q_%7Bv%7D%5D%20&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt=" p + q = [p_{s} + q_{s},p_{v} + q_{v}] " width="208" height="19" /><br>
+
+**Example :**<br>
+Quaternion::Add([Quaternion1](#quaternioncreate),Quaternion2);
+
 
 
 ### Note : 
