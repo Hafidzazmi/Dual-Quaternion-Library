@@ -7,7 +7,7 @@ This library was build for Dual Quaternion Calculation Applications. <br><br>
 | Name | Type | Description |
 | --- | --- | --- |
 | [**Create**](#quaternioncreate) | std::array<double, 4> | Create Quaternion Rotation, Angle in Degree |
-| **Conjugate** | std::array<double, 4> | Quaternion Conjugate |
+| [**Conjugate**](#quaternionconjugate) | std::array<double, 4> | Quaternion Conjugate |
 | **Normalize** | double | Normalize Quaternion , Unit Quaternion = 1 |
 | **Add** | std::array<double, 4> | Add Two Quaternions |
 | **Subtract** | std::array<double, 4> | Subtract Two Quaternions |
@@ -35,11 +35,26 @@ Create a quaternion rotation based on the equation below :
 <img src="http://www.sciweavers.org/tex2img.php?eq=q%3D%20%5Bcos%28%20%5Ctheta%20%2F2%29%2C%20d%2Asin%28%20%5Ctheta%20%2F2%29%5D&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="q= [cos( \theta /2), d*sin( \theta /2)]" width="233" height="19" />
 where d = Direction of rotation. <br>
 
-**Example :**<br>
+**Example :**
 double Angle = 90; *//in Degrees*<br>
 std::array<int, 3> DirectionOfRotation = {0,1,0};<br>
 std::array<double, 4> Quaternion1; <br>
 Quaternion1 = Quaternion::Create(Angle,DirectionOfRotation);
+
+
+### Quaternion::Conjugate
+Return Quaternion Conjugate based on the equation below :
+
+<img src="http://www.sciweavers.org/tex2img.php?eq=q%3D%20%5Bcos%28%20%5Ctheta%20%2F2%29%2C%20-d%2Asin%28%20%5Ctheta%20%2F2%29%5D&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="q= [cos( \theta /2), -d*sin( \theta /2)]" width="247" height="19" />
+where d = Direction of rotation. <br>
+
+**Example :**
+double Angle = 90; *//in Degrees*<br>
+std::array<int, 3> DirectionOfRotation = {0,1,0};<br>
+std::array<double, 4> Quaternion1; <br>
+Quaternion1 = Quaternion::Create(Angle,DirectionOfRotation);<br>
+Quaternion::Conjugate(Quaternion1);
+
 
 ### Note : 
 This library used std::array<> <br>
